@@ -1,0 +1,19 @@
+<html>
+	<head>
+		<meta content="width=device-width,initial-scale=1" name="viewport" />
+		<style>
+			body {text-align:center}
+			input {display:block;margin:100px auto;font-size:24px;}
+		</style>
+	</head>
+	<body>
+		<input id="n" />
+		<input onclick="x(this)" value="Whatsapp" type="button" />
+		<input onclick="x(this)" value="Truecall" type="button" />
+		<script>
+			function x(a){
+				var a=a.value,b='https://',c=document.getElementById('n').value.replace(/[^0-9]/g,'');
+				"620"==c.substr(0,3)?c=c.substr(3,20):"62"==c.substr(0,2)?c=c.substr(2,20):"0"==c.substr(0,1)&&(c=c.substr(1,20));
+				document.location = a=='Whatsapp'?b+'api.whatsapp.com/send/?phone=+62'+c:b+'truecaller.com/search/id/62'+c;
+			}
+		</script>
