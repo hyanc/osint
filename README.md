@@ -4,3 +4,6 @@
 - Responsive page for mobile screen
 - Check Whatsapp
 - Check Truecaller
+
+# Tips
+To avoid Truecaller exchange with your contact numbers, Do Not use your active email
