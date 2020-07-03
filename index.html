@@ -15,7 +15,7 @@
 			function x(a){
 				a=a.value,b='https://',c=document.getElementById('n').value.replace(/[^0-9]/g,'');
 				"620"==c.substr(0,3)?c=c.substr(3,20):"62"==c.substr(0,2)?c=c.substr(2,20):"0"==c.substr(0,1)&&(c=c.substr(1,20));
-				d={'Whatsapp':'api.whatsapp.com/send/?phone=+62','Truecall':'truecaller.com/search/id/','Google':'google.com/search?q=0'};
+				d={'Whatsapp':'api.whatsapp.com/send/?phone=62','Truecall':'truecaller.com/search/id/','Google':'google.com/search?q=0'};
 				document.location = b+d[a]+c;
 			}
 		</script>
