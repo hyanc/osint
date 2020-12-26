@@ -3,6 +3,7 @@
 - Currently check Indonesian phone number
 - Responsive page for mobile screen
 - Check Whatsapp
+- Check SMS or iMessage
 - Check Truecaller
 - Check Google
 
