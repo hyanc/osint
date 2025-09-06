@@ -3,22 +3,27 @@
 		<meta content="width=device-width,initial-scale=1" name="viewport" />
 		<style>
 			body {text-align:center}
-			input {display:block;margin:50px auto;font-size:24px;}
+			div {display:flex;justify-content:center;gap:12px;flex-wrap:wrap;}
+			input {margin:1vh auto;font-size:24px;flex: 0 0 auto;width:auto;}
+			div > input {margin-inline:0;}
 			@media (prefers-color-scheme: dark) {body{background-color:#303131} #n{background-color:#4C4C49;color:#BBB7B0}}
 		</style>
 	</head>
 	<body>
-		<input id="n" />
-		<input onclick="x(this)" value="Whatsapp" type="button" />
-		<input onclick="x(this)" value="SMS" type="button" />
-		<input onclick="x(this)" value="Truecall" type="button" />
+		<input id="n" /><br>
+		<input onclick="x(this)" value="Whatsapp" type="button" /><br>
+		<input onclick="x(this)" value="SMS" type="button" /><br>
+		<div>
+			<input onclick="x(this)" value="Login" type="button" />
+			<input onclick="x(this)" value="Truecall" type="button" />
+		</div>
 		<input onclick="x(this)" value="Google" type="button" />
 		<script>
 			function x(a){
 				e = 62, //Indonesia country code
 				a=a.value,b='https://',c=document.getElementById('n').value.replace(/[^0-9]/g,'');
 				e+"0"==c.substr(0,3)?c=c.substr(3,20):e==c.substr(0,2)?c=c.substr(2,20):"0"==c.substr(0,1)&&(c=c.substr(1,20));
-				d={'Whatsapp':'api.whatsapp.com/send/?phone='+e,'Truecall':'truecaller.com/search/id/','Google':'google.com/search?q=0'};
+				d={'Whatsapp':'api.whatsapp.com/send/?phone='+e,'Login':'truecaller.com/who-texted-me/gt/EMAIL LOGIN/#','Truecall':'truecaller.com/search/id/','Google':'google.com/search?q=0'};
 				if(c.length>3) document.location = (a=='SMS'?a+'://':b+d[a])+c;
 			}
 		</script>
